@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Apartamentos no Bom Retiro | Investimento em São Paulo | Corretora [Nome]</title>
+  <meta name="description" content="Apartamentos no Bom Retiro (37 - 45m²). Condições especiais, simulador interativo e atendimento via WhatsApp. Site criado para conversão - Corretora [Nome]." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph (basic) -->
+  <meta property="og:site_name" content="Corretora [Nome]" />
+  <meta property="og:title" content="Apartamentos no Bom Retiro | Corretora [Nome]" />
+  <meta property="og:description" content="Apartamentos 37 a 45m². Condições especiais e financiamento facilitado. Saiba mais via WhatsApp." />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema: LocalBusiness + Offer (no price) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Corretora [Jujuba]",
+    "url": "https://colorido-imoveis-go.lovable.app",
+    "logo": "",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Endereço do Stand",
+      "addressLocality": "Bom Retiro, São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "01000-000",
+      "addressCountry": "BR"
+    },
+    "telephone": "+55 11 94990-0260",
+    "priceRange": "Var. conforme unidade",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Empreendimentos",
+      "itemListElement": []
+    }
+  }
+  </script>
+
+  <!-- PIXEL / GA4 placeholders -->
+  <!-- Meta Pixel: inserir script do pixel aqui -->
+  <!-- GA4: substituir MEASUREMENT_ID pelo seu id -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+    gtag('config', 'MEASUREMENT_ID');
+  </script> -->
+
+  <style>
+    :root{
+      --rosa:#FE33AB;
+      --amarelo:#FECB2B;
+      --bg:#f8f9fa; /* very light gray */
+      --text:#111;
+      --muted:#666;
+      --max-width:1100px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    /* Mobile-first */
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max-width);margin:0 auto;padding:16px}
+
+    /* HERO */
+    .hero{background:var(--rosa);color:#fff;padding:28px 16px;border-radius:12px;display:flex;flex-direction:column;gap:12px}
+    .hero h1{margin:0;font-size:1.45rem;line-height:1.05}
+    .hero p{margin:0;opacity:0.95}
+    .cta-row{display:flex;gap:8px;align-items:center}
+    .btn-primary{background:var(--amarelo);color:#000;padding:12px 14px;border-radius:10px;font-weight:700;border:none;cursor:pointer}
+    .micro{font-size:0.86rem;opacity:0.95}
+<div class="hero-media">
+  <video autoplay muted loop playsinline poster="decorado.mp4" preload="metadata">
+    <source src="localizacao.mp4" type="video/mp4">
+    <source src="localizacao.webm" type="video/webm">
+    <!-- fallback -->
+    <img src="poster.jpg" alt="Vista do empreendimento Buono • Bom Retiro">
+  </video>
+</div>    
+
+    /* Simulador */
+    .card{background:#fff;border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    .simu{margin-top:14px}
+    .field{margin-bottom:10px}
+    label{display:block;font-size:0.85rem;margin-bottom:6px;color:var(--muted)}
+    input[type="text"], input[type="number"], select{width:100%;padding:10px;border-radius:8px;border:1px solid #eee;font-size:0.95rem}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .summary{background:linear-gradient(180deg,#fff,#fff);padding:12px;border-radius:8px;border:1px dashed #eee}
+    .summary-row{display:flex;justify-content:space-between;padding:6px 0;font-weight:600}
+    .small-btn{background:transparent;border:1px solid var(--rosa);color:var(--rosa);padding:6px 10px;border-radius:8px;font-weight:700;cursor:pointer}
+
+    /* Details blocks */
+    .details{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
+    .detail-item{display:flex;gap:12px;align-items:flex-start}
+    .iconbox{width:44px;height:44px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(180deg,var(--rosa),#ff7ccf)}
+    .badge{background:var(--amarelo);color:#000;padding:6px 8px;border-radius:999px;font-weight:700;font-size:0.8rem}
+
+    /* Boxes for project options */
+    .project-options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:8px}
+    .proj-box{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:10px;border:1px solid #eee}
+
+    /* Highlight yellow block */
+    .yellow-block{background:var(--amarelo);padding:14px;border-radius:12px;color:#000;margin-top:12px}
+
+    /* Investors */
+    .invest{background:#fff;padding:12px;border-radius:12px;margin-top:12px}
+    .invest h3{color:var(--rosa);margin:0}
+
+    /* Carousel stylized */
+    .carousel{display:flex;overflow-x:auto;gap:10px;padding-bottom:8px;margin-top:12px}
+    .slide{min-width:210px;border-radius:12px;padding:12px;background:linear-gradient(180deg,#fff,#fff);border:2px solid rgba(0,0,0,0.03)}
+
+    /* Testimonials */
+    .testi{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+    .testi-card{background:#fff;padding:12px;border-radius:10px;border:2px solid var(--amarelo)}
+
+    /* Table */
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:10px;border-bottom:1px solid #f0f0f0;text-align:left}
+    th{font-weight:700}
+
+    /* Form */
+    form .row{display:grid;gap:8px}
+    .footer{margin-top:18px;padding:12px;text-align:center;font-size:0.95rem}
+
+    /* Desktop adjustments */
+    @media(min-width:820px){
+      .hero{flex-direction:row;align-items:center;justify-content:space-between;padding:36px}
+      .grid{grid-template-columns:1fr 1fr 1fr}
+      .project-options{grid-template-columns:repeat(3,1fr)}
+      .testi{grid-template-columns:repeat(3,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- HERO -->
+    <header class="hero" role="banner">
+      <div>
+        <h1>Seu novo imóvel no Bom Retiro — invista no centro de SP!</h1>
+        <p>Apartamentos entre 37 e 45m² com condições especiais.</p>
+        <p class="micro">Unidades com condições exclusivas por tempo limitado.</p>
+      </div>
+      <div class="cta-row">
+        <a id="hero-whatsapp" class="btn-primary" href="https://wa.me/5511949900260?text=Olá%20gostaria%20de%20saber%20mais%20sobre%20as%20unidades%20no%20Bom%20Retiro" target="_blank" rel="noopener">SAIBA MAIS</a>
+      </div>
+    </header>
+
+    <!-- SIMULADOR -->
+    <section class="simu card" aria-labelledby="simu-title">
+      <h2 id="simu-title">Simulador de condição — (valor do imóvel não exibido)</h2>
+      <p style="margin:6px 0 12px;color:var(--muted)">Use os campos abaixo para gerar uma simulação. O valor base fica configurado internamente para cálculos.</p>
+
+      <div class="field">
+        <label for="tipo">Tipo de unidade</label>
+        <select id="tipo">
+          <option value="na_planta">Na planta</option>
+          <option value="em_construcao">Em construção</option>
+          <option value="pronto">Pronto</option>
+        </select>
+      </div>
+
+      <div class="grid">
+        <div class="field">
+          <label for="entrada">Entrada sugerida</label>
+          <input id="entrada" type="text" inputmode="numeric" value="2000" />
+        </div>
+        <div class="field">
+          <label for="parcelas">Parcelas mensais (número x valor)</label>
+          <input id="parcelas" type="text" value="27x 650" />
+        </div>
+        <div class="field">
+          <label for="parcelasAno">Parcelas anuais (ex: 2x 5000)</label>
+          <input id="parcelasAno" type="text" value="2x 5000" />
+        </div>
+      </div>
+
+      <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;align-items:center">
+        <button id="calcBtn" class="small-btn">Gerar Simulação</button>
+        <div style="flex:1"></div>
+        <button id="whatsSim" class="small-btn">QUERO ESSA CONDIÇÃO — SAIBA MAIS</button>
+      </div>
+
+      <div class="summary" id="summary" aria-live="polite" style="margin-top:12px">
+        <div class="summary-row"><span>Valor aproximado do financiamento</span><span id="valorFin">—</span></div>
+        <div class="summary-row"><span>Entrada total</span><span id="saidaEntrada">—</span></div>
+        <div class="summary-row"><span>Parcelas mensais</span><span id="saidaParcelas">—</span></div>
+        <div class="summary-row"><span>Parcelas anuais</span><span id="saidaParAnual">—</span></div>
+        <div class="summary-row"><span>Renda estimada mínima</span><span id="saidaRenda">—</span></div>
+      </div>
+
+    </section>
+
+    <!-- DETAILS -->
+    <section class="details" aria-labelledby="det-title">
+      <h2 id="det-title" style="grid-column:1/-1">Detalhes do Empreendimento</h2>
+
+      <div class="card">
+        <div class="detail-item">
+          <div class="iconbox" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="white"/></svg></div>
+          <div>
+            <strong>Metragens</strong>
+            <div style="color:var(--muted)">37m² a 45m² — Disponível em studio e 1 dormitório. Studios com layout integrado; 1 dorm com área social otimizada.</div>
+          </div>
+        </div>
+
+        <div class="detail-item" style="margin-top:10px">
+          <div class="iconbox" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="white"/></svg></div>
+          <div>
+            <strong>Localização</strong>
+            <div style="color:var(--muted)">Próximo à Estação da Luz — comércio, cultura e mobilidade total.</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+          <div class="badge">Área fitness</div>
+          <div class="badge">Coworking</div>
+          <div class="badge">Lavanderia</div>
+          <div class="badge">Bicicletário</div>
+          <div class="badge">Segurança</div>
+        </div>
+
+        <div class="project-options" style="margin-top:12px">
+          <div class="proj-box">
+            <div>
+              <strong>Na planta</strong>
+              <div style="color:var(--muted);font-size:0.9rem">Entrada reduzida + parcelas durante obra</div>
+            </div>
+            <a href="https://wa.me/5511949900260?text=Tenho%20interesse%20em%20Na%20planta%20-%20quero%20saber%20mais" class="small-btn" target="_blank">SAIBA MAIS</a>
+          </div>
+
+          <div class="proj-box">
+            <div>
+              <strong>Em construção</strong>
+              <div style="color:var(--muted);font-size:0.9rem">Entrada intermediária — prazos e condições equilibrados</div>
+            </div>
+            <a href="https://wa.me/5511949900260?text=Tenho%20interesse%20em%20Em%20construção%20-%20quero%20saber%20mais" class="small-btn" target="_blank">SAIBA MAIS</a>
+          </div>
+
+          <div class="proj-box">
+            <div>
+              <strong>Pronto</strong>
+              <div style="color:var(--muted);font-size:0.9rem">Entrada maior — financiamento imediato</div>
+            </div>
+            <a href="https://wa.me/5511949900260?text=Tenho%20interesse%20em%20Pronto%20-%20quero%20saber%20mais" class="small-btn" target="_blank">SAIBA MAIS</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Minha Casa Minha Vida check -->
+    <section class="yellow-block" aria-labelledby="mcmv">
+      <h3 id="mcmv">Será que você se enquadra no Minha Casa Minha Vida?</h3>
+      <p style="margin:8px 0">Descubra em 10 segundos se você se enquadra no Minha Casa Minha Vida!</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button id="simularMCMV" class="small-btn">SIMULAR — SAIBA MAIS</button>
+      </div>
+    </section>
+
+    <!-- INVESTIDORES -->
+    <section class="invest" aria-labelledby="inv">
+      <h3 id="inv">Por que investir no Bom Retiro?</h3>
+      <ul style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
+        <li>Valorização: região central em revitalização.</li>
+        <li>Alta procura: comércio forte e vida cultural ativa.</li>
+        <li>Acessibilidade: fácil acesso ao transporte público.</li>
+        <li>Crescimento contínuo: obras e melhorias na região.</li>
+        <li>Polo da moda: economia têxtil impulsiona turismo de compras.</li>
+      </ul>
+
+      <div style="margin-top:8px;padding:10px;border-radius:10px;border:1px dashed #eee;display:flex;justify-content:space-between;align-items:center;gap:10px">
+        <div>
+          <strong>Projeção de aluguel</strong>
+          <div style="color:var(--muted);font-size:0.95rem">(ver dados no book do empreendimento)</div>
+        </div>
+        <a href="https://wa.me/5511949900260?text=Quero%20estudo%20de%20rentabilidade" class="small-btn" target="_blank">QUERO ESTUDO</a>
+      </div>
+    </section>
+
+    <!-- CAROUSEL estilizado -->
+    <section aria-labelledby="car">
+      <h3 id="car">Plantas e áreas</h3>
+      <div class="carousel" role="list">
+        <div class="slide" role="listitem">
+          <strong>Planta 37m²</strong>
+          <p style="color:var(--muted);margin-top:6px">Studio otimizado para moradia ou locação.</p>
+        </div>
+        <div class="slide" role="listitem">
+          <strong>Planta 45m²</strong>
+          <p style="color:var(--muted);margin-top:6px">1 dormitório com opção de vaga.</p>
+        </div>
+        <div class="slide" role="listitem">
+          <strong>Área comum</strong>
+          <p style="color:var(--muted);margin-top:6px">Fitness, coworking e lavanderia moderna.</p>
+        </div>
+        <div class="slide" role="listitem">
+          <strong>Localização estratégica</strong>
+          <p style="color:var(--muted);margin-top:6px">Próximo à Estação da Luz e polos comerciais.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section aria-labelledby="dep">
+      <h3 id="dep">Depoimentos</h3>
+      <div class="testi">
+        <div class="testi-card"><strong style="color:var(--rosa)">“Comprei para investir e já recebi propostas de aluguel.”</strong><div style="color:var(--muted);margin-top:6px">— João M.</div></div>
+        <div class="testi-card"><strong style="color:var(--rosa)">“Localização perfeita, perto de tudo.”</strong><div style="color:var(--muted);margin-top:6px">— Júlia R.</div></div>
+        <div class="testi-card"><strong style="color:var(--rosa)">“Condição de pagamento que cabia no meu bolso.”</strong><div style="color:var(--muted);margin-top:6px">— Marcos T.</div></div>
+      </div>
+      <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
+        <div class="badge">+ de X unidades vendidas</div>
+      </div>
+    </section>
+
+    <!-- Tabela de tipologias -->
+    <section aria-labelledby="tab">
+      <h3 id="tab">Tipologias</h3>
+      <table class="card" aria-describedby="tab-desc">
+        <caption id="tab-desc" style="text-align:left;padding:8px 0;color:var(--muted)">Plantas e facilidades</caption>
+        <thead>
+          <tr><th>Área</th><th>Descrição</th><th>Vaga</th><th>Planta</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>37m²</td><td>Studio / 1 dormitório compacto</td><td>Sem vaga / vaga opcional</td><td><a href="#" download="planta-37.pdf">Baixar planta</a></td></tr>
+          <tr><td>45m²</td><td>1 dormitório — opção de vaga</td><td>Vaga opcional</td><td><a href="#" download="planta-45.pdf">Baixar planta</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- FORMULÁRIO -->
+    <section class="card" aria-labelledby="form">
+      <h3 id="form">Contato — garanta sua condição</h3>
+      <form id="leadForm">
+        <div class="row">
+          <input name="nome" type="text" placeholder="Nome" required />
+          <input name="telefone" type="text" placeholder="Telefone / WhatsApp" required />
+          <input name="email" type="email" placeholder="E-mail" />
+          <select name="tipoUnidade">
+            <option value="37">37m²</option>
+            <option value="45">45m²</option>
+          </select>
+          <textarea name="mensagem" placeholder="Mensagem (opcional)" rows="3"></textarea>
+        </div>
+
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button type="submit" class="btn-primary">ENVIAR — SAIBA MAIS</button>
+          <a href="https://wa.me/5511949900260?text=Olá%20quero%20mais%20informações" target="_blank" class="small-btn">WhatsApp</a>
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div style="display:flex;flex-direction:column;gap:6px;align-items:center">
+        <div>Endereço do stand — Horários: Seg–Sáb | Contato: +55 11 94990-0260</div>
+        <div style="font-size:0.9rem;color:var(--muted)">Unidades com condições especiais até <strong>[data]</strong>. Condições válidas para poucas unidades selecionadas.</div>
+        <div style="margin-top:6px">© <strong>Corretora [Nome]</strong></div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Internal constant for calculations (do not expose on UI)
+    const SALE_PRICE = 279900.00;
+
+    // helpers
+    function parseMoneyInput(v){
+      if(!v) return 0;
+      v = String(v).replace(/[R$\.\s]/g,'').replace(',','.').trim();
+      const m = parseFloat(v.match(/\d+(?:[\.,]\d+)?/)?.[0] || 0);
+      return isNaN(m)?0:m;
+    }
+
+    function parseParcelString(s){
+      // expected formats: "27x 650" or "650" or "27x650"
+      if(!s) return {qty:0, value:0};
+      const m = s.match(/(\d+)x\s*([\d\.\,]+)/i);
+      if(m){
+        return {qty:parseInt(m[1],10), value:parseMoneyInput(m[2])};
+      }
+      // fallback: try to split by space
+      const parts = s.split(/\s+/);
+      for(const p of parts){
+        if(p.includes('x')){
+          const mm = p.match(/(\d+)x(\d+)/i);
+          if(mm) return {qty:parseInt(mm[1],10), value:parseMoneyInput(mm[2])};
+        }
+      }
+      // else assume single value
+      const val = parseMoneyInput(s);
+      return {qty:val?12:0, value:val};
+    }
+
+    // DOM
+    const tipo = document.getElementById('tipo');
+    const entradaEl = document.getElementById('entrada');
+    const parcelasEl = document.getElementById('parcelas');
+    const parcelasAnoEl = document.getElementById('parcelasAno');
+
+    const valorFin = document.getElementById('valorFin');
+    const saidaEntrada = document.getElementById('saidaEntrada');
+    const saidaParcelas = document.getElementById('saidaParcelas');
+    const saidaParAnual = document.getElementById('saidaParAnual');
+    const saidaRenda = document.getElementById('saidaRenda');
+
+    function setDefaultsByType(t){
+      if(t==='na_planta'){
+        entradaEl.value = '2000';
+        parcelasEl.value = '27x 650';
+        parcelasAnoEl.value = '2x 5000';
+      }else if(t==='em_construcao'){
+        entradaEl.value = '5000';
+        parcelasEl.value = '27x 750';
+        parcelasAnoEl.value = '2x 5000';
+      }else if(t==='pronto'){
+        entradaEl.value = '20000';
+        parcelasEl.value = '120x 2100';
+        parcelasAnoEl.value = '2x 0';
+      }
+    }
+
+    tipo.addEventListener('change',e=>{
+      setDefaultsByType(e.target.value);
+      generateSim();
+    });
+
+    document.getElementById('calcBtn').addEventListener('click',e=>{e.preventDefault();generateSim();});
+
+    function generateSim(){
+      const entrada = parseMoneyInput(entradaEl.value);
+      const p = parseParcelString(parcelasEl.value);
+      const pa = parcelasAnoEl.value;
+      // financed value estimation: sale price - entrada
+      const financed = Math.max(0, SALE_PRICE - entrada);
+      // monthly total
+      const monthly = p.value ? p.value : 0;
+      // parse parcelas anuais
+      const paParsed = parseParcelString(pa);
+      const anualTotal = paParsed.qty * paParsed.value;
+
+      // renda estimada mínima (rule of thumb: 30% renda -> renda = parcela mensal * 3.3) -- conservative
+      const rendaEstimada = monthly ? Math.ceil((monthly*3.3)) : Math.ceil((financed/180));
+
+      // outputs (format BR)
+      const formatBR = v=> v.toLocaleString('pt-BR',{style:'currency',currency:'BRL',minimumFractionDigits:0});
+
+      valorFin.textContent = formatBR(financed);
+      saidaEntrada.textContent = formatBR(entrada);
+      saidaParcelas.textContent = p.qty + 'x ' + formatBR(p.value);
+      saidaParAnual.textContent = paParsed.qty + 'x ' + formatBR(paParsed.value) + ' (total ' + formatBR(anualTotal) + ')';
+      saidaRenda.textContent = formatBR(rendaEstimada);
+
+      // save current summary for WhatsApp
+      window.currentSim = {
+        entrada, financed, monthly:p.value, mensalQty:p.qty, anualQty:paParsed.qty, anualValue:paParsed.value, rendaEstimada
+      };
+
+      return window.currentSim;
+    }
+
+    // initial defaults
+    setDefaultsByType(tipo.value);
+    generateSim();
+
+    // WhatsApp with sim message
+    document.getElementById('whatsSim').addEventListener('click',()=>{
+      const s = window.currentSim || generateSim();
+      const msg = encodeURIComponent(`Tenho interesse nas unidades no Bom Retiro. Simulação: Entrada ${s.entrada.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}, Parcelas ${s.mensalQty}x ${s.monthly.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}, Parcelas anuais ${s.anualQty}x ${s.anualValue.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}. Renda estimada: ${s.rendaEstimada.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}. Quero fechar uma consultoria.`);
+      const url = `https://wa.me/5511949900260?text=${msg}`;
+      window.open(url,'_blank');
+    });
+
+    // MCMV quick button — sends minimal form to WA
+    document.getElementById('simularMCMV').addEventListener('click',()=>{
+      const msg = encodeURIComponent('Gostaria de verificar se me enquadro no Minha Casa Minha Vida. Renda: __, Estado civil: __, FGTS: __');
+      const url = `https://wa.me/5511949900260?text=${msg}`;
+      window.open(url,'_blank');
+    });
+
+    // Hero WhatsApp already has link
+
+    // Form submit — placeholder to send to CRM + pixel
+    document.getElementById('leadForm').addEventListener('submit',async function(e){
+      e.preventDefault();
+      const data = new FormData(e.target);
+      const payload = Object.fromEntries(data.entries());
+
+      // Basic validation
+      if(!payload.nome || !payload.telefone){
+        alert('Preencha nome e telefone');
+        return;
+      }
+
+      // Send to CRM (placeholder) — replace URL by your endpoint
+      try{
+        // Example: await fetch('https://seu-crm.exemplo/api/leads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+        console.log('Enviar lead para CRM (substituir endpoint)',payload);
+        // Track event (substitua função do pixel/gtag)
+        alert('Lead enviado! Em breve nossas consultoras entrarão em contato.');
+        // Optional: open whatsapp prefilled
+        const wa = `https://wa.me/5511949900260?text=${encodeURIComponent('Olá, acabei de enviar o formulário e tenho interesse nas unidades.')}`;
+        window.open(wa,'_blank');
+        e.target.reset();
+      }catch(err){
+        console.error(err);
+        alert('Erro ao enviar. Tente novamente.');
+      }
+    });
+
+    // Accessibility: allow keyboard scroll for carousel
+    document.querySelectorAll('.carousel').forEach(c=>{
+      c.addEventListener('wheel',e=>{
+        e.preventDefault(); c.scrollLeft += e.deltaY;
+      });
+    });
+
+  </script>
+</body>
+</html>
